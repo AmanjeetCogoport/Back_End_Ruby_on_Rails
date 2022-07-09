@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # blogs/delete_blog/7
   get "/blogs", to: "blogs#blog_list"
   post "/blogs/create_blog", to: "blogs#create_blog"
-  delete "/blogs/delete_blog/:id", to: "blogs#delete_blog"
+  delete "/blogs/delete-blog/:id", to: "blogs#delete_blog"
   put "/blogs/update_blog/:id", to: "blogs#update_blog"
   get "/blogs/search_blog", to: "blogs#search_blog"
 
