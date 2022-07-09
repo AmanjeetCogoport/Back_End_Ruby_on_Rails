@@ -46,4 +46,25 @@ class UsersController < ApplicationController
     end
 
 
+
+    def login
+        user = User.find_by(email: params['email'])
+        if(user)
+            if(user.passward == params['passward'])
+                render json: user
+            else
+                message={
+                    "text"=>"Password is incorrect.."
+                }
+                render json: message
+            end
+        else
+            message={
+                    "text"=>"You need to create an account first."
+                }
+                render json: message
+        end        
+    end
+
+
 end

@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   delete"users/delete_user", to: "users#delete_user"
   put "users/update_user", to: "users#update_user"
 
+  post "/users/login", to: "users#login"
+
 end
